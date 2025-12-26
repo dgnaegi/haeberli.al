@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(join(__dirname, 'dist')));
 
 // Handle React Router (or any client-side routing)
-app.get('/:path*', (req, res) => {
+app.get('/*any', (req, res) => {
   res.sendFile(join(__dirname, 'dist', 'index.html'));
 });
 
