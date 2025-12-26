@@ -1,0 +1,46 @@
+/*
+ * Legal Disclaimer
+ *
+ * These web fonts are licensed exclusively for use on the following:
+ * Web domains belonging to this customer.
+ * al-zh.ch
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2025
+ */
+
+@font-face {
+	font-family: "AL Ruder Plakat Web Regular";
+	src: url("./webFonts/ALRuderPlakatWeb-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "AL Ruder Plakat VarWeb Regular";
+	src: url("./webFonts/ALRuderPlakatVarWeb-[YTUC,YTLC,YTDE].woff2") format("woff2");
+}
+
+:root {
+  --neonmagenta: #ff1975;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "AL Ruder Plakat Web Regular", "AL Ruder Plakat VarWeb Regular", 'Arial Black', 'Arial Bold', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: white;
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+}
+
