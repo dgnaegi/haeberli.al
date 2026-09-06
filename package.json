@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently -k -n vite,tanja \"vite\" \"npm --prefix tanja run dev -- -p 4001\"",
-    "build": "vite build && npm --prefix tanja install && npm --prefix tanja run build",
+    "build": "vite build && npm --prefix tanja install --include=dev && npm --prefix tanja run build",
     "heroku-postbuild": "npm run build",
     "preview": "vite preview",
     "start": "concurrently -k -n web,tanja \"node server.js\" \"npm --prefix tanja start -- -p 4001\""
