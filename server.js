@@ -14,6 +14,9 @@ const TANJA_PORT = process.env.TANJA_PORT || 4001;
 app.use('/tanja', createProxyMiddleware({
   target: `http://localhost:${TANJA_PORT}`,
   changeOrigin: true,
+  // express strips the '/tanja' mount prefix before the middleware sees req.url;
+  // Next expects it back since the app is configured with basePath: '/tanja'
+  pathRewrite: (path) => `/tanja${path}`,
   on: {
     proxyRes: (proxyRes) => {
       // Keep /tanja out of search results regardless of the app's own meta tags
