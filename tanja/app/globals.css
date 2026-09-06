@@ -1,0 +1,60 @@
+:root {
+  --background: #0A0A0A; /* main background */
+  --background-alt: #141414; /* alternating sections */
+  --foreground: #EDEDED; /* main text */
+  --foreground-muted: #AAAAAA; /* secondary text */
+  --accent: #FF00FF; /* neon magenta */
+  --accent-secondary: #00FFFF; /* cyan */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@font-face {
+  font-family: "ALUnica77";
+  src: url("/fonts/ALUnica77-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Optional additional weights/styles for ALUnica77 */
+@font-face {
+  font-family: "ALUnica77";
+  src: url("/fonts/ALUnica77-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ALUnica77";
+  src: url("/fonts/ALUnica77-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; width: 100%; }
+img, video { max-width: 100%; height: auto; }
+html { scroll-behavior: smooth; }
+::selection { background: var(--accent); color: #0A0A0A; }
+section { scroll-margin-top: var(--nav-offset, 80px); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
