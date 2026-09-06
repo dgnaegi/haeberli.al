@@ -16,7 +16,7 @@ app.use('/tanja', createProxyMiddleware({
   changeOrigin: true,
   // express strips the '/tanja' mount prefix before the middleware sees req.url;
   // Next expects it back since the app is configured with basePath: '/tanja'
-  pathRewrite: (path) => `/tanja${path}`,
+  pathRewrite: (path) => (path === '/' ? '/tanja' : `/tanja${path}`),
   on: {
     proxyRes: (proxyRes) => {
       // Keep /tanja out of search results regardless of the app's own meta tags
